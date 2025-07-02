@@ -10,7 +10,7 @@ class AboutController extends Controller
     {
         $aboutItem = [
             (object)[
-                'image' => asset('assets/images/avatar.jpg'),
+                'image' => asset('assets/images/483463787_1219448246570991_8742165660380768665_n-removebg-preview.png'),
 
                 
                 'name' => 'AH Samin Yasar',

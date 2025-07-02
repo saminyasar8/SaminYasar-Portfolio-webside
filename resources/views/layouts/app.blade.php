@@ -6,7 +6,7 @@
     <title>@yield('title')</title>
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/avatar.jpg') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     @stack('styles')
 </head>

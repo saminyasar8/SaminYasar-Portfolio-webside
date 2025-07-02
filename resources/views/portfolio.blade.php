@@ -26,6 +26,7 @@
                 <!-- Project 1 -->
                 <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
                     <div class="card border-0 shadow-sm overflow-hidden">
+                        
                         <div class="portfolio-img-wrapper">
                             <img src="{{ asset('assets/images/project1.jpg') }}" class="card-img-top" alt="E-commerce Website">
                             <div class="portfolio-overlay">
@@ -152,6 +153,7 @@
     <div class="modal fade" id="project1Modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
+                
                 <div class="modal-header">
                     <h5 class="modal-title">E-commerce Website</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
