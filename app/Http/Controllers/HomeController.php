@@ -6,11 +6,16 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+   
     public function index()
     {
-        $titleName = [
-            'name' => 'Samin Yasar',
-            'title' => 'Professional Web Developer & Designer',
+        $homeItem = [
+            (object)[
+                'name' => ' AH Samin Yasar',
+                'description' => 'Professional Full Stack Web Developer & Designer',
+                'cv_link' => 'https://drive.google.com/file/d/1-pbz1Pgxay5W2JORfFRv6SZfyMi64NQq/view?usp=sharing',
+
+            ]
         ];
         $featureWork =[
             [
@@ -32,6 +37,7 @@ class HomeController extends Controller
 
             ],
         ];
-        return view('home', compact('featureWork'));
+        
+        return view('home', compact('featureWork', 'homeItem'));
     }
 }

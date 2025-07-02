@@ -8,12 +8,13 @@
     <header class="hero-section">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
-                
+                @foreach($homeItem as $item)
                 <div class="col-lg-6">
-                    <h1 class="display-4 text-white fw-bold">Hi, I'm Samin Yasar</h1>
-                    <p class="lead text-white">Professional Web Developer & Designer</p>
-                    <a href="{{ route('portfolio') }}" class="btn btn-primary btn-lg mt-3">View My Work</a>
+                    <h1 class="display-4 text-white fw-bold">Hi, {{ $item->name }}</h1>
+                    <p class="lead text-white">{{ $item->description }}</p>
+                    <a href="{{ $item->cv_link }}" class="btn btn-primary btn-lg mt-3">View My CV</a>
                 </div>
+                @endforeach
             </div>
         </div>
     </header>
@@ -24,7 +25,8 @@
             <h2 class="text-center mb-5">Featured Work</h2>
             <div class="row">
                 <?php
-                 foreach($featureWork as $featuredWork) {
+                 foreach($featureWork as $featuredWork) 
+                 {
 
                 ?>
                 <div class="col-md-4 mb-4">
@@ -37,10 +39,10 @@
                         </div>
                     </div>
                 </div>
+
                 <?php
                  }
                 ?>
-
                 </div>
 
             </div>

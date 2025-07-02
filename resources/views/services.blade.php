@@ -10,103 +10,27 @@
                 <p class="lead">I offer a range of professional services to help your business grow online.</p>
             </div>
             <div class="row g-4">
+                @foreach($servicesItem as $item)
                 <div class="col-md-4">
                     <div class="card h-100">
+                        
                         <div class="card-body text-center p-4">
+                
                             <div class="icon-box bg-bark pacity-10 text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px; line-height: 60px;">
                                 <i class="fas fa-code fa-lg"></i>
                             </div>
-                            <h5 class="card-title">Web Development</h5>
-                            <p class="card-text">Custom website development using the latest technologies to ensure fast, secure, and scalable solutions.</p>
+                            <h5 class="card-title">{{ $item->title }}</h5>
+                            <p class="card-text">{{ $item->description }}</p>
                             <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check text-primary me-2"></i> Responsive Design</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> CMS Integration</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> E-commerce Solutions</li>
+                                @foreach($item->features as $feature)
+                                    <li><i class="fas fa-check text-primary me-2"></i> {{ $feature }}</li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-dark opacity-10 text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px; line-height: 60px;">
-                                <i class="fas fa-paint-brush fa-lg"></i>
-                            </div>
-                            <h5 class="card-title">Web Design</h5>
-                            <p class="card-text">Beautiful, user-friendly designs that reflect your brand and engage your audience effectively.</p>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check text-primary me-2"></i> UI/UX Design</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Wireframing</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Prototyping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-dark opacity-10 text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px; line-height: 60px;">
-                                <i class="fas fa-mobile-alt fa-lg"></i>
-                            </div>
-                            <h5 class="card-title">Mobile App Development</h5>
-                            <p class="card-text">Cross-platform mobile applications that work seamlessly on both iOS and Android devices.</p>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check text-primary me-2"></i> React Native</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Flutter</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Native Development</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-dark opacity-10 text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px; line-height: 60px;">
-                                <i class="fas fa-search-dollar fa-lg"></i>
-                            </div>
-                            <h5 class="card-title">SEO Optimization</h5>
-                            <p class="card-text">Improve your website's visibility on search engines and drive more organic traffic to your business.</p>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check text-primary me-2"></i> Keyword Research</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> On-page SEO</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Technical SEO</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-dark opacity-10 text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px; line-height: 60px;">
-                                <i class="fas fa-bullhorn fa-lg"></i>
-                            </div>
-                            <h5 class="card-title">Digital Marketing</h5>
-                            <p class="card-text">Comprehensive digital marketing strategies to increase your online presence and customer engagement.</p>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check text-primary me-2"></i> Social Media</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Content Marketing</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Email Campaigns</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-dark-opacity-10 text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px; line-height: 60px;">
-                                <i class="fas fa-headset fa-lg"></i>
-                            </div>
-                            <h5 class="card-title">Support & Maintenance</h5>
-                            <p class="card-text">Ongoing support and maintenance to keep your website running smoothly and securely.</p>
-                            <ul class="list-unstyled text-start">
-                                <li><i class="fas fa-check text-primary me-2"></i> Regular Updates</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Security Patches</li>
-                                <li><i class="fas fa-check text-primary me-2"></i> Performance Optimization</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+
         </div>
     </section>
 
